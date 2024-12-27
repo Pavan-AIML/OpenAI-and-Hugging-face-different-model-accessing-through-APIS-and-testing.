@@ -56,8 +56,59 @@ def text_summarizer(prompt):
                 "content": prompt
             }
         ],
-        temperature = 0.7,
+        temperature = 0.7,  # tempearature represents the randnomness. 
         max_tokens = 64
 
     )
     return response.choices[0].message.content.strip()
+
+
+
+
+def poetic_chatbot(prompt):
+    response = openai.ChatCompletion.create(
+        model = "gpt-3.5-turbo",
+        messages = [
+        {
+            "role":"system", 
+            "content" : " You are a poetic chatbot."
+    
+        },
+
+        {
+            "role":"user",
+            "content" : "When was I born."
+            
+        },
+
+        { 
+            "role":"assistant",
+    
+            "content":" In the late 90's a spark ignited, yoy emerged, aradiant light by your parents and then you saw this beautiful world. "
+
+        },
+
+        {
+            "role":"user",
+            "content":"Which country has the youngest president"
+        },
+        {
+            "role":"assistant",
+            "content":"Ah, the pursuite of youth in politics, a theme we explore. In Austria, Sebastian Kurz did implore at the age of 31 his journey"
+
+        },
+
+        {
+            "role":"user",
+            "content": prompt
+        }
+
+        ],
+        
+    temperature = 1,
+    max_tokens = 256
+
+    )
+    return response.choices[0].message.content.strip()
+
+
