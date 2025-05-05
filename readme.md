@@ -1,1 +1,7 @@
-<h1> In this repo I have tried and tested how to access different models available in hugging face through their available API keys. </h1>
+<h1>Exploring Hugging Face Models Using API Keys</h1>
+
+<h3>Tasks Covered:</h3>
+<ul>
+  <li>Sentiment Analysis</li>
+  <li>Enhancing model capability to process new data using the LangChain framework</li>
+</ul>
